@@ -8,17 +8,18 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.5;
 	padding: 3%;
-	background: rgb(2 0 36);
+	/* overflow: hidden; */
+	/* background: rgb(2 0 36);
 	background: linear-gradient(
 		180deg,
 		rgb(2 0 36 / 100%) 34%,
 		rgb(121 110 9 / 100%) 69%,
 		rgb(239 247 249 / 100%) 100%
-	);
+	); */
 
-	--primary-text-color: #181820;
-	--secondary-text-color: #5c5c62;
-	--durability-text-color: #6a737d9c;
+	--primary-text-color: #f2f2f7;
+	--secondary-text-color: #f6f6f9;
+	--durability-text-color: #9e9fa09c;
 	--icon-color: #6a737d;
 	--border-color: #ff9a0045;
 	--text-decoration-color: #ff9a00;
@@ -44,11 +45,14 @@ body {
 
 .resume {
 	margin: 50px auto;
-	border: 1px solid #f5f5f5;
-	box-shadow: 1px 1px 7px 7px #f5f5f5;
+	/* border: 1px solid #f5f5f5; */
+	border: 3px yellow solid;
+
 	padding: 30px 0;
 	max-width: 900px;
-	background-color: white;
+	background-color: rgba(62, 59, 59, 0.163);
+	position: relative;
+	z-index: 999;
 }
 
 .resume__block {
@@ -110,6 +114,11 @@ body {
 	justify-content: start;
 }
 
+.contact-info__item:hover {
+	color: var(--text-decoration-color);
+	transform: scale(1.1);
+}
+
 .contact-info__item:not(:last-child) {
 	margin-bottom: 20px;
 }
@@ -120,11 +129,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: black;
-}
-
-.contact-info__item-icon path {
-	fill: var(--icon-color);
+	color: var(--primary-text-color) !important;
 }
 
 .contact-info__item-icon {
@@ -178,6 +183,17 @@ body {
 	text-align: justify;
 }
 
+.skills__superpowers {
+	list-style-type: none;
+}
+
+.skills__superpowers li:before {
+	content: "\25B6";
+	margin-right: 0.5em;
+	color: var(--text-decoration-color);
+	font-weight: 900;
+} 
+
 .experiences {
 	flex: 1 1 60%;
 	margin-right: 50px;
@@ -220,6 +236,9 @@ body {
 	color: var(--primary-text-color);
 	text-align: left;
 	margin-bottom: 10px;
+}
+.experiences__company-project-link {
+	color: var(--text-decoration-color);
 }
 
 .experiences__company-project-responsibilities {
@@ -278,4 +297,348 @@ body {
 	height: 1rem;
 	background-color: var(--text-decoration-color);
 	gap: 5px;
+}
+
+/* 
+body {
+	background: #000;
+	height: 100vh;
+	
+} */
+.starBackground {
+	/* background: #000; */
+	height: 100vh;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.shootingStarContainer:nth-child(1) {
+	position: absolute;
+	width: 100%;
+	height: 130%;
+	transform: rotate(36deg);
+	z-index: 10;
+}
+.shootingStarContainer:nth-child(2) {
+	position: absolute;
+	width: 100%;
+	height: 130%;
+	transform: rotate(42deg);
+	z-index: 10;
+}
+.shootingStarContainer:nth-child(3) {
+	position: absolute;
+	width: 100%;
+	height: 130%;
+	transform: rotate(45deg);
+	z-index: 10;
+}
+.shootingStar {
+	position: absolute;
+	height: 1px;
+	background: linear-gradient(-70deg, rgba(255, 235, 235, 1), rgba(0, 0, 0, 1));
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(1) {
+	left: calc(42%);
+	top: calc(60%);
+	animation: shootingFrames 1438ms ease-in-out 58209ms;
+	opacity: 0.79;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(2) {
+	left: calc(4%);
+	top: calc(81%);
+	animation: shootingFrames 2218ms ease-in-out 40228ms;
+	opacity: 0.89;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(3) {
+	left: calc(31%);
+	top: calc(26%);
+	animation: shootingFrames 967ms ease-in-out 37325ms;
+	opacity: 0.6;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(4) {
+	left: calc(29%);
+	top: calc(14%);
+	animation: shootingFrames 1564ms ease-in-out 22768ms;
+	opacity: 0.66;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(5) {
+	left: calc(16%);
+	top: calc(26%);
+	animation: shootingFrames 2472ms ease-in-out 16630ms;
+	opacity: 0.89;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(6) {
+	left: calc(25%);
+	top: calc(57%);
+	animation: shootingFrames 1442ms ease-in-out 54789ms;
+	opacity: 0.87;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(7) {
+	left: calc(44%);
+	top: calc(33%);
+	animation: shootingFrames 2228ms ease-in-out 24815ms;
+	opacity: 0.19;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(8) {
+	left: calc(41%);
+	top: calc(37%);
+	animation: shootingFrames 2002ms ease-in-out 297ms;
+	opacity: 0.82;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(9) {
+	left: calc(34%);
+	top: calc(61%);
+	animation: shootingFrames 1313ms ease-in-out 2205ms;
+	opacity: 0.54;
+}
+.shootingStarContainer:nth-child(1) .shootingStar:nth-child(10) {
+	left: calc(50%);
+	top: calc(37%);
+	animation: shootingFrames 2569ms ease-in-out 49602ms;
+	opacity: 0.44;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(1) {
+	left: calc(42%);
+	top: calc(93%);
+	animation: shootingFrames 2252ms ease-in-out 679ms;
+	opacity: 0.32;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(2) {
+	left: calc(31%);
+	top: calc(94%);
+	animation: shootingFrames 1640ms ease-in-out 30115ms;
+	opacity: 0.66;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(3) {
+	left: calc(11%);
+	top: calc(48%);
+	animation: shootingFrames 1006ms ease-in-out 22842ms;
+	opacity: 0.68;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(4) {
+	left: calc(41%);
+	top: calc(4%);
+	animation: shootingFrames 2231ms ease-in-out 18973ms;
+	opacity: 0.7;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(5) {
+	left: calc(49%);
+	top: calc(7%);
+	animation: shootingFrames 798ms ease-in-out 43453ms;
+	opacity: 0.54;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(6) {
+	left: calc(34%);
+	top: calc(47%);
+	animation: shootingFrames 973ms ease-in-out 3635ms;
+	opacity: 0.61;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(7) {
+	left: calc(26%);
+	top: calc(44%);
+	animation: shootingFrames 2243ms ease-in-out 12064ms;
+	opacity: 0.62;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(8) {
+	left: calc(29%);
+	top: calc(47%);
+	animation: shootingFrames 2714ms ease-in-out 42323ms;
+	opacity: 0.56;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(9) {
+	left: calc(13%);
+	top: calc(78%);
+	animation: shootingFrames 1822ms ease-in-out 53083ms;
+	opacity: 0.29;
+}
+.shootingStarContainer:nth-child(2) .shootingStar:nth-child(10) {
+	left: calc(39%);
+	top: calc(59%);
+	animation: shootingFrames 1599ms ease-in-out 16159ms;
+	opacity: 0.27;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(1) {
+	left: calc(15%);
+	top: calc(45%);
+	animation: shootingFrames 1894ms ease-in-out 56461ms;
+	opacity: 0.17;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(2) {
+	left: calc(8%);
+	top: calc(35%);
+	animation: shootingFrames 1365ms ease-in-out 47537ms;
+	opacity: 0.73;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(3) {
+	left: calc(44%);
+	top: calc(40%);
+	animation: shootingFrames 2275ms ease-in-out 6354ms;
+	opacity: 0.36;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(4) {
+	left: calc(26%);
+	top: calc(6%);
+	animation: shootingFrames 1776ms ease-in-out 40380ms;
+	opacity: 0.26;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(5) {
+	left: calc(44%);
+	top: calc(12%);
+	animation: shootingFrames 1124ms ease-in-out 40279ms;
+	opacity: 0.72;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(6) {
+	left: calc(25%);
+	top: calc(70%);
+	animation: shootingFrames 757ms ease-in-out 28847ms;
+	opacity: 0.82;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(7) {
+	left: calc(15%);
+	top: calc(56%);
+	animation: shootingFrames 1950ms ease-in-out 4186ms;
+	opacity: 0.78;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(8) {
+	left: calc(10%);
+	top: calc(41%);
+	animation: shootingFrames 1891ms ease-in-out 12332ms;
+	opacity: 0.4;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(9) {
+	left: calc(34%);
+	top: calc(16%);
+	animation: shootingFrames 759ms ease-in-out 28821ms;
+	opacity: 0.61;
+}
+.shootingStarContainer:nth-child(3) .shootingStar:nth-child(10) {
+	left: calc(29%);
+	top: calc(29%);
+	animation: shootingFrames 918ms ease-in-out 35998ms;
+	opacity: 0.5;
+}
+@keyframes shootingFrames {
+	0% {
+		transform: translateX(0);
+		width: 0;
+	}
+	30% {
+		width: 200px;
+	}
+	100% {
+		width: 0;
+		transform: translateX(833px);
+	}
+}
+.stars,
+.twinkleMask,
+.twinkleMask2,
+.clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.stars {
+	background: #000 url("https://wolf.drjm.co.uk/nightsky/stars.jpg") repeat top
+		center;
+	z-index: 0;
+}
+.twinkleMask {
+	background: transparent
+		url("https://wolf.drjm.co.uk/nightsky/twinklemask.png") repeat top center;
+	z-index: 1;
+	animation: twinkleFrames 700s linear infinite;
+}
+.twinkleMask2 {
+	background: transparent
+		url("https://wolf.drjm.co.uk/nightsky/twinkleMask2.png") repeat top center;
+	z-index: 2;
+	height: 200%;
+	animation: twinkleFrames2 300s linear infinite;
+}
+.clouds {
+	background: transparent url("https://wolf.drjm.co.uk/nightsky/clouds.png")
+		repeat top center;
+	z-index: 3;
+	height: 150%;
+	animation: cloudsFrames 300s linear infinite;
+}
+.fogContainer {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 7;
+}
+.fog {
+	position: absolute;
+	left: -50%;
+	top: -30%;
+	width: 200%;
+	height: 200%;
+	animation-name: fogFrames;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: linear-gradient(
+		-5deg #00000000 0%,
+		#ffffff15 40%,
+		#74590121 45%,
+		#8b845b21 55%,
+		#00000000 70%
+	);
+}
+@keyframes fogFrames {
+	0% {
+		transform: none;
+	}
+	10% {
+		transform: scaleY(0.75) translate(5%, -2%) rotate(15deg);
+	}
+	25% {
+		transform: scaleY(1) translate(10%, 7%);
+	}
+	50% {
+		transform: scaleY(0.5) rotate(-15deg);
+	}
+	75% {
+		transform: scaleY(0.2) translate(7%, -2%);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes twinkleFrames {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+@keyframes twinkleFrames2 {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 5000px;
+	}
+}
+@keyframes cloudsFrames {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 10000px 0;
+	}
 }

@@ -7,6 +7,14 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.5;
+	padding: 3%;
+	background: rgb(2 0 36);
+	background: linear-gradient(
+		180deg,
+		rgb(2 0 36 / 100%) 34%,
+		rgb(121 110 9 / 100%) 69%,
+		rgb(239 247 249 / 100%) 100%
+	);
 
 	--primary-text-color: #181820;
 	--secondary-text-color: #5c5c62;
@@ -40,6 +48,7 @@ body {
 	box-shadow: 1px 1px 7px 7px #f5f5f5;
 	padding: 30px 0;
 	max-width: 900px;
+	background-color: white;
 }
 
 .resume__block {
@@ -48,7 +57,7 @@ body {
 	margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
 	.main-info,
 	.contact_info_container {
 		flex-direction: column;
@@ -107,9 +116,11 @@ body {
 
 .contact-info__item-icon-wrapper {
 	margin-right: 10px;
-	width: 20px;
+	width: 36px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	color: black;
 }
 
 .contact-info__item-icon path {
@@ -259,4 +270,12 @@ body {
 
 .additional-info__languages-item {
 	color: var(--secondary-text-color);
+}
+
+.divider {
+	display: inline-flex;
+	width: 2px;
+	height: 1rem;
+	background-color: var(--text-decoration-color);
+	gap: 5px;
 }

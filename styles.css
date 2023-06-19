@@ -37,7 +37,7 @@ body {
 
 .resume {
 	margin: 50px auto;
-	
+
 	border: 3px yellow solid;
 
 	padding: 30px 0;
@@ -184,7 +184,7 @@ body {
 	margin-right: 0.5em;
 	color: var(--text-decoration-color);
 	font-weight: 900;
-} 
+}
 
 .experiences {
 	flex: 1 1 60%;
@@ -291,9 +291,7 @@ body {
 	gap: 5px;
 }
 
-
 .starBackground {
-	
 	height: 100vh;
 	position: fixed;
 	z-index: 1;
